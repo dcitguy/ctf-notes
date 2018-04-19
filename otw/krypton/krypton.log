@@ -1,0 +1,47 @@
+ssh krypton.labs.overthewire.org -p 2222 -l krypton
+
+Level Info
+Welcome to Krypton! The first level is easy. The following string encodes the password using Base64:
+
+S1JZUFRPTklTR1JFQVQ=
+
+    echo "S1JZUFRPTklTR1JFQVQ=" | base64 -d
+
+
+krypton1 - KRYPTONISGREAT
+    cat /krypton/krypton1/krypton2
+    YRIRY GJB CNFFJBEQ EBGGRA
+
+    ROT13 -> LEVEL TWO PASSWORD ROTTEN
+
+krypton2 - ROTTEN
+    cat /krypton/krypton2/krypton3
+    OMQEMDUEQMEK
+
+    /krypton/krypton2/encrypt /etc/issue --> GNGZFGXFEZX
+    cat /etc/issue --> Ubuntu 14.04.5 LTS \n \l
+
+    GNGZFGXFEZX -->(ROT14)--> UBUNTULTSNL
+
+    OMQEMDUEQMEK -->(ROT14)-->CAESARISEASY
+
+
+krypton3 - CAESARISEASY
+    mktemp -d
+    cat found1 found2 found3 krypton4 > /tmp/tmp.xXCMwALynA/test1
+    sed 's/\(.\)/\1\n/g' /tmp/tmp.xXCMwALynA/test1 |  sort | uniq -ic | sort -r
+
+    https://www.dcode.fr/monoalphabetic-substitution --> Known text THELEVELFOURPASSWORDIS
+
+krypton4 - BRUTE
+    https://www.dcode.fr/vigenere-cipher --> Known Key Length 6 == FREKEY
+
+
+krypton5 - CLEARTEXT
+    https://www.dcode.fr/vigenere-cipher --> determine key Length == 9
+    found1 analyze - key length 9 - KEYLENGTH
+
+
+krypton6 - RANDOM
+
+    atom://teletype/portal/95405e95-368c-4ecd-a83b-97747bcbe7ce
