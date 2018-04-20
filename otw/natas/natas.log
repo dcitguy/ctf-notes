@@ -30,6 +30,19 @@ new_encode = ClVLIh4ASCsCBE8lAxMacFMZQGIMW1RtFxxYJgBIUnBKExssFxFdaEhf
 natas12 -
   upload shell.php and pass ?cmd=cat%20/etc/natas_webpass/natas13
 
+
 natas13 - jmLTY0qiPZBbaKc9341cqPQZBJv7MQbY
-  upload *new* shell.php with jpg magic number to bypass exif_imagetype()
-  and pass ?cmd=cat%20/etc/natas_webpass/natas13
+  upload shell_new.php with jpg magic number (FFD8FFE0) to bypass exif_imagetype()
+  and pass ?cmd=cat%20/etc/natas_webpass/natas14
+
+
+natas14 - Lg96M10TdfaPyVBkJdjymbllQ5L6qdl1
+  SQL Injection:
+
+
+natas15 - AwWj0w5cvxrZiONgZ9J5stNVkmxdk39J
+  looked up help for ideas.  Was on the right path. Need to brute force password
+
+natas16 - WaIHEacj63wnNIBROHeqi3p9t0m5nhmh
+
+natas17 - 8Ps3H0GWbn5rd9S7GmAdgQNdkhPkq9cw
