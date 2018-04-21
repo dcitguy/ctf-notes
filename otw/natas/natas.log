@@ -44,5 +44,33 @@ natas15 - AwWj0w5cvxrZiONgZ9J5stNVkmxdk39J
   looked up help for ideas.  Was on the right path. Need to brute force password
 
 natas16 - WaIHEacj63wnNIBROHeqi3p9t0m5nhmh
+  similar to natas15.  wrote python to Crack
 
 natas17 - 8Ps3H0GWbn5rd9S7GmAdgQNdkhPkq9cw
+
+natas18 - xvKIqDjy4OPv7wCRgDlmj0pFsCsDjhdP
+  see natas18.py - had to bruteforce php session id
+
+natas19 - 4IwIrekcuZlA9OsjOkoUtwU6lhokCPYs
+
+natas20 - eofm3Wsshxc5bwtVnEuGIlr7ivb9KABF
+
+natas21 - IFekPyrQXftziDEsUr3x21sYuahypdgJ
+
+natas22 - chG9fbe1Tq2eWVMgjYYD1MsfIvN461kJ
+  intercept with Burp to catch actual response
+
+natas23 - D0vlad33nQF0Hz2EP255TP5wSW9ZsRSE
+  if(strstr($_REQUEST["passwd"],"iloveyou") && ($_REQUEST["passwd"] > 10 ))
+  strstr looks for first occurrence of a match
+  php comparison will hit the 11 and compare to the 10
+  passwd = 11iloveyou
+
+
+natas24 - OsRmXFguozKpTZZ5X14zNO43379LZveg
+  strcmp fails against an empty array
+  ?passwd[]=
+
+natas25 - GHF6X7YwACaYYssHVY05cFq83hRktl4c
+
+natas26 - oGgWAJ7zcGT28vYazGo4rkhOPDhBu34T
